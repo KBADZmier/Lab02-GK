@@ -1,0 +1,96 @@
+<!DOCTYPE html><html>
+    <head><title>Canvas Graphics
+    </title>
+    <script>
+
+function init()
+ {canvas = document.getElementById("theCanvas");
+ graphics = canvas.getContext("2d");draw();
+     } // draw something on the canvas}
+    </script>
+
+<style>
+body{background-color: white;}
+canvas{ background-color: rgb(143, 130, 130);}
+</style>
+</head>
+<body onload="init()"> 
+    <div id="blok" width ="700" height ="600" > 
+
+</div>
+<canvas id="myCanvas" width="600" height="600"></canvas>
+<script>
+
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+
+   // context.beginPath();
+     // context.moveTo(300, 300);
+      //context.lineTo(350, 250);
+      //context.lineTo(400, 300);
+      //context.lineTo(375, 375);
+      //context.lineTo(325, 375);
+   //context.closePath();
+   //context.fillStyle="blue";
+    //context.fill();
+   //context.strokeStyle="black";
+   //context.lineWidth=1;
+    //context.stroke();
+/////////////////////////
+context.beginPath();
+      context.moveTo(100, 100);
+      context.lineTo(150, 50);
+      context.lineTo(200, 100);
+      context.lineTo(175, 175);
+      context.lineTo(125, 175);
+      context.closePath();
+     context.fillStyle = "blue";
+     context.fill();
+     context.stroke();
+
+      
+      // Rysowanie oczu
+      context.beginPath();
+      context.arc(125, 105, 8, 0, Math.PI * 2, false);
+      context.arc(175, 105, 8, 0, Math.PI * 2, false);
+      context.fillStyle = "white";
+      context.fill();
+      //context.stroke();
+
+      // Rysowanie źrenic
+      context.beginPath();
+      context.arc(125, 105, 4, 0, Math.PI * 2, false);
+      context.arc(175, 105, 4, 0, Math.PI * 2, false);
+      context.fillStyle = "black";
+      context.fill();
+
+      // Rysowanie ust
+      context.beginPath();
+      context.moveTo(130, 140);
+      context.quadraticCurveTo(150, 160, 160, 140);
+      context.lineTo(130,140);
+      context.fillStyle = "black";
+      context.fill();
+      context.strokeStyle = "black";
+      context.stroke();
+//rysowanie zebów
+context.beginPath();
+      context.moveTo(150, 145);
+      context.lineTo(150,145);
+      context.lineTo(155,145);
+      context.lineTo(155,140);
+     context.lineTo(150,140);
+///////////////////////////////////
+      context.lineTo(140,140);
+     context.lineTo(140,145);
+      context.lineTo(135,145);
+      context.lineTo(135,145);
+ 
+      context.fillStyle = "white";
+      context.fill();
+     // context.stroke();
+
+</script>
+</canvas>
+</body>
+</html>
